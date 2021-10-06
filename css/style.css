@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa+One&family=Open+Sans+Condensed:wght@300&family=Open+Sans:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* header */
+
+header {
+    background-color: white;
+    height: 100px;
+}
+
+/* .container_grid {
+    width: 1680px;
+    margin: 0 auto;
+} */
+
+.position_header {
+    height:  100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icons {
+    width: 332px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icons a {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 32px;
+} 
+
+/* categorias */
+
+.secao_categorias {
+    background-color: black;
+    height: 100px;
+}
+
+.categorias {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.categorias a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 32px
+}
+
+/* banner */
+
+.banner {
+    background-image: url(../img/img_games.png);
+    height: 1120px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.banner_itens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%;
+}
+
+.texto_banner h1 {
+    width: 850px;
+    color: white;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 72px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.texto_banner a {
+    width: 325px;
+    color:white;
+    text-align: center;
+    background-color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 40px;
+    justify-content:space-between;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* .banner_button {
+    width: 325px;
+    text-align: center;
+}
+
+.banner_button a {
+    color:white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 40px;
+    justify-content: flex-end;
+} */
+
+/* .games {
+    background-image: url(../img/gamer.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1120px;
+}
+
+.texto_games {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+} */
+
+@media screen and (max-width: 1200px) {
+    .container_grid {
+        width: 90%;
+    }
+
+    .categorias a {
+        font-size: 16px;
+    }
+
+    .logo {
+        width: 300px;
+    }
+
+    .icon1200 {
+        width: 50px;
+    }
+
+    .icons {
+        width: 225px;
+    }
+
+    .texto_banner h1 {
+        font-size: 48px;
+    }
+
+    .texto_banner a {
+        font-size: 27px;
+    }
+}
+
+/* @media screen and (max-width: 768px) {
+    .secao_categorias a {
+        text-siz
+    }
+} */
