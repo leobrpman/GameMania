@@ -6,11 +6,12 @@
     box-sizing: border-box;
 }
 
+
 /* header */
 
 header {
     background-color: white;
-    height: 100px;
+    height: 300px;
 }
 
 /* .container_grid {
@@ -19,11 +20,12 @@ header {
 } */
 
 .position_header {
-    height:  100%;
+    height:  50%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 
 .icons {
     width: 332px;
@@ -32,18 +34,36 @@ header {
 }
 
 .icons a {
+    width: 75px;
+    height: 75px;
+}
+
+.bars_menu {
+    width: 40px;
+    display: none;
+}
+
+/* .icons a {
     color: black;
     text-decoration: none;
     text-transform: uppercase;
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 32px;
-} 
+}  */
 
 /* categorias */
 
+.secao_mobile {
+    display: none;
+}
+
+.icons_mobile {
+    display: none;
+}
+
 .secao_categorias {
     background-color: black;
-    height: 100px;
+    height: 50%;
 }
 
 .categorias {
@@ -60,11 +80,42 @@ header {
     font-size: 32px
 }
 
+.categorias a:hover {
+    color: cornsilk;
+    zoom: 1.3;
+    transition: transform .2s
+}
+
+
 /* banner */
 
-.banner {
+#banner1 img {
+    display: none;
+}
+
+.banner-ativo {
+    display: flex;
+}
+
+.banner1 {
     background-image: url(../img/img_games.png);
-    height: 1120px;
+    height: 800px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.banner2 {
+    background-image: url(../img/img_equip.png);
+    height: 800px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.banner3 {
+    background-image: url(../img/img_pcgamer.png);
+    height: 800px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -72,9 +123,16 @@ header {
 
 .banner_itens {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 10%;
+    padding: 5%;
+    height: 100%;
+}
+
+.texto_banner {
+    height: 70%;
+    justify-content: space-between;
 }
 
 .texto_banner h1 {
@@ -84,21 +142,32 @@ header {
     font-size: 72px;
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 30px;
+    justify-content: space-between;
+    height: 420px;
 }
 
-.texto_banner a {
+.button_banner {
     width: 325px;
-    color:white;
     text-align: center;
     background-color: black;
-    text-decoration: none;
     text-transform: uppercase;
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 40px;
-    justify-content:space-between;
-    padding: 15px;
+    justify-content:center;
     border-radius: 10px;
+    align-items: baseline;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.button_banner:hover {
+    zoom: 1.2;
+    transition: transform .2s
+}
+
+.button_banner a {
+    text-decoration: none;
+    color: white;
 }
 
 /* .banner_button {
@@ -131,25 +200,371 @@ header {
     height: 100%;
 } */
 
+.news {
+    background-color: #131313;
+    height: 850px;
+}
+
+.news h1 {
+    width: 100%;
+    height: 18%;
+    color: white;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 72px;
+    text-transform: uppercase;
+    text-align: center;
+    justify-content: space-between;
+    padding-top: 2.5%;
+}
+
+.content-news {
+    width: 68.75%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 61.5%;
+    margin: 0 auto;
+    margin-bottom: 1.8%;
+}
+
+.card-news {
+    width: 23%;
+    height: 96%;
+    background-color: #4B5F65;
+    padding: 1%;
+    margin: 1%;
+}
+
+.card-news img {
+    width: 100%;
+    padding-bottom: 5px;
+}
+
+.card-news h3 {
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.card-news p {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+    text-align: justify;
+}
+
+.card-news a {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.newsletter {
+    background-color: black;
+    height: 200px;
+    width: 100%;
+    display: flex;
+}
+
+.newsletter_itens {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.newsletter_text {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 28px;
+    font-weight: 1000;
+    width: 33%;
+    align-items: center;
+    text-align: center;
+}
+
+.form_mail {
+    width: 48.5%;
+    height: 42.5%;
+    position: relative;
+    align-items: center;
+    background-color: white;
+    border-radius: 30px;
+}
+
+.campo_mail {
+    width: 72%;
+    height: 100%;
+    border-radius: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+    border-style: none;
+}
+
+
+.submit {
+    background-color: #4B5F65;
+    color: white;
+    font-family: 'Changa One', sans-serif;
+    font-size: 28px;
+    text-transform: uppercase;
+    width: 25%;
+    align-items: center;
+    text-align: center;
+    border-radius: 25px;
+    position: absolute;
+    right: 2%;
+    height: 90%;
+    top: 5%;
+}
+
+.search {
+    width: 34%;
+    height: 32%;
+    position: relative;
+    align-items: center;
+    background-color: white;
+    border-radius: 30px;
+    border-style: solid;
+}
+
+.campo_search {
+    width: 80%;
+    height: 90%;
+    border-style: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.search_button {
+    background-image: url(../img/lupa.png);
+    background-size: cover;
+    width: 15%;
+    align-items: center;
+    border-style: none;
+    border-radius: 40%;
+    position: absolute;
+    right: 2%;
+    height: 90%;
+    top: 5%;
+}
+
+
+.site_map {
+    height: 600px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.map_block {
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+}
+
+.map_block h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 42px;
+    font-weight: bolder;
+    padding-bottom: 5%;
+}
+
+.map_block a {
+    color: black;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 28px;
+    padding-left: 5%;
+}
+
+.map_block p {
+    color: black;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 28px;
+    width: unset;
+    padding-left: 5%;
+}
+
+.bck_footer {
+    width: 100%;
+    background-color: black;
+}
+
+.footer {
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    align-items: center;
+    width: 100%;
+}
+
+.social_nets {
+    float: left;
+}
+
+.social_nets a {
+    width: 75px;
+    height: 75px;
+}
+
+.icon_footer {
+    width: 75px;
+    height: 75px;
+}
+
+.pagamentos {
+    float: right;
+    margin-right: 0%;
+}
+
+.footer h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.footer h2 {
+    display: none;
+}
+
+.social_nets h1 {
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.pagamentos h1 {
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 28px;
+    text-align: right;
+    font-weight: bold;
+}
+
+
+
+
+@media screen and (max-width: 1400px) {
+
+   
+    .social_nets a {
+        width: 50px;
+        height: 50px;
+    }
+
+    .icon_footer {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .social_nets h1 {
+        font-size: 20px;
+    }
+    
+    .pagamentos h1 {
+        font-size: 20px;
+    }
+
+    .card-news h3 {
+        font-size: 20px;
+    }
+    
+    .card-news p {
+        font-size: 20px;
+    }
+    
+    .card-news a {
+        font-size: 22px;
+    }
+
+    .map_block h1 {
+        font-size: 38px;
+    }
+    
+    .map_block a {
+        font-size: 24px;
+    }
+    
+    .map_block p {
+        font-size: 24px;
+    }
+
+}
+
+
+
 @media screen and (max-width: 1200px) {
+
+/*     
     .container_grid {
         width: 90%;
+    } */
+
+    header {
+        height: 150px;
+        position: relative;
+    }
+
+    .position_header {
+        height: 100%;
+    }
+
+    .bars_menu {
+        display: inline-block;
+        width: 50px;
+        align-items: center;
+    }
+
+    .secao_categorias {
+        background-color: unset;
+        height: unset;
+        width: unset;
+    }
+
+    .categorias {
+        display: none;
+        flex-direction: column;
+        background-color: black;
+        border-radius: 10px;
+        align-items: center;
+        margin-right: 160px;
+        height: unset;
+        width: 16%;
+        margin-top: -120px;
     }
 
     .categorias a {
         font-size: 16px;
+        margin: 10px;
     }
 
+    .categorias a:hover{
+        zoom: 1.1;
+        transition: transform .2s
+    }
+    
+    .menu-show {
+        display: flex;
+    }
+    
     .logo {
         width: 300px;
-    }
-
-    .icon1200 {
-        width: 50px;
-    }
-
-    .icons {
-        width: 225px;
+        display: flex;
+        justify-content: space-between;
     }
 
     .texto_banner h1 {
@@ -159,10 +574,651 @@ header {
     .texto_banner a {
         font-size: 27px;
     }
+
+    .icons {
+        width: 300px;
+    }
+
+    .icons a {
+        width: 50px;
+    }
+
+    .icon_header {
+        width: 50px;
+    }
+
+    .texto_banner h1 {
+        width: 580px;
+    }
+
+    .site_map {
+        height: 100%;
+    }
+
+    .footer h1 {
+        font-size: 16px;
+    }
+
+    .social_nets a {
+        width: 35px;
+        height: 35px;
+    }
+
+    .icon_footer {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .social_nets h1 {
+        font-size: 16px;
+    }
+    
+    .pagamentos h1 {
+        font-size: 16px;
+    }
+
+    .card-news h3 {
+        font-size: 18px;
+    }
+    
+    .card-news p {
+        font-size: 18px;
+    }
+    
+    .card-news a {
+        font-size: 20px;
+    }
+
+    .map_block h1 {
+        font-size: 30px;
+    }
+    
+    .map_block a {
+        font-size: 20px;
+    }
+    
+    .map_block p {
+        font-size: 20px;
 }
 
-/* @media screen and (max-width: 768px) {
-    .secao_categorias a {
-        text-siz
+}
+
+
+@media screen and (max-width: 1100px) {
+
+    .categorias {
+        margin-top: -120px;
+        margin-right: 120px;
     }
-} */
+
+    .categorias a {
+        font-size: 14px;
+        margin: 8px;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+
+    .categorias {
+        margin-right: 120px;
+    }
+    
+    .newsletter_text {
+        font-size: 20px;
+    }
+    
+    .newsletter_itens img {
+        width: 115px;
+        height: 100px;
+    }
+
+    .campo_mail {
+        font-size: 20px;
+    }
+    
+    .submit {
+        font-size: 24px;
+    }
+    
+    .copyright {
+        display: none;
+    }
+
+    .footer h2 {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+        color: white;
+        margin-bottom: 10px;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .social_nets h1 {
+        font-size: 14px;
+    }
+
+    .pagamentos h1 {
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width: 990px) {
+
+    .categorias {
+        margin-right: 180px;
+    }
+
+    .logo {
+        width: 250px;
+    }
+    
+    .icons {
+        width: 250px;
+    }
+    
+        .map_block h1 {
+            font-size: 24px;
+        }
+    
+        .map_block a {
+            font-size: 18px;
+        }
+    
+}
+
+@media screen and (max-width: 900px) {
+
+    .categorias {
+        margin-right: 120px;
+    }
+
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
+    header {
+        height: 120px;
+    }
+    
+    .position_header {
+        height:  50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .position_header a {
+        align-items: center;
+    }
+    .secao_mobile {
+        display: flex;
+        background-color: black;
+        height: 50%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .icons_mobile {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icon_header {
+        width: 40px;
+        height: 40px;
+        margin: 10px;
+    }
+
+    .bars_menu img {
+        width: 40px;
+        height: 40px;
+    }
+    
+
+    
+    /* .categorias a:hover {
+        color: cornsilk;
+        zoom: 1.3;
+    } */
+    
+    
+    
+    
+    .icons {
+        display: none;
+    }
+        
+    
+    .texto_banner h1 {
+        width: 80%;
+    }
+    
+    /* banner */
+    
+    /* #banner1 img {
+        display: none;
+    }
+    
+    .banner-ativo {
+        display: flex;
+    } */
+    
+    .banner1 {
+        background-image: url(../img/img_games.png);
+        height: 320px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .banner2 {
+        background-image: url(../img/img_equip.png);
+        height: 320px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .banner3 {
+        background-image: url(../img/img_pcgamer.png);
+        height: 320px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .banner_itens {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5%;
+        height: 100%;
+    }
+    
+    .texto_banner {
+        height: 70%;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .texto_banner h1 {
+        width: unset;
+        color: white;
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size: 28px;
+        text-transform: uppercase;
+        text-align: center;
+        justify-content: center;
+        height: 100%;
+    }
+    
+    .button_banner {
+        width: 100px;
+        text-align: center;
+        background-color: black;
+        text-transform: uppercase;
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size: 16px;
+        justify-content:center;
+        border-radius: 10px;
+        align-items: baseline;
+        padding: 5px;
+        margin: 0 auto;
+    }
+    
+    .button_banner:hover {
+        zoom: 1.2;
+    }
+    
+    .button_banner a {
+        text-decoration: none;
+        color: white;
+    }
+
+    
+    .news {
+        background-color: #131313;
+        height: 100%;
+        padding-bottom: 2.5%;
+    }
+    
+    .news h1 {
+        width: 100%;
+        height: 18%;
+        color: white;
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size: 30px;
+        text-transform: uppercase;
+        text-align: center;
+        justify-content: space-between;
+        padding-top: 2.5%;
+    }
+    
+    .content-news {
+        width: 68.75%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items:center;
+        height: 61.5%;
+        margin: 0 auto;
+        margin-bottom: 1.8%;
+    }
+    
+    .card-news {
+        width: 120px;
+        height: 370px;
+        background-color: #4B5F65;
+        padding: 1%;
+        margin: 1%;
+    }
+    
+    .card-news img {
+        width: 100%;
+        padding-bottom: 5px;
+    }
+    
+    .card-news h3 {
+        color: white;
+        text-transform: uppercase;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        font-size: 14px;
+    }
+    
+    .card-news p {
+        color: white;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+        text-align: justify;
+    }
+    
+    .card-news a {
+        color: white;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        text-decoration: none;
+        margin-bottom: 1px;
+    }
+
+    
+    .newsletter {
+        height: 100px;
+        padding: 15px;
+    }
+
+    .newsletter_itens {
+        display: unset;
+    }
+
+    .newsletter_itens img {
+        display: none;
+    }
+    
+    .newsletter_text {
+        font-size: 14px;
+        font-weight: 600;
+        width: 100%;
+    }
+
+    .newsletter_itens p {
+        margin-bottom: 5px;
+    }
+
+    .form_mail {
+        width: 100%;
+    }
+    
+    .campo_mail {
+        font-size: 16px;
+    }
+    
+    .submit {
+        font-size: 16px;
+    }
+    
+    .campo_search {
+        font-size: 12px;
+        padding: 10px;
+        border-radius: 30px;
+    }
+
+    .site_map {
+        height: 100%;
+        flex-wrap: wrap;
+    }
+    
+    
+    .map_block h1 {
+        font-size: 14px;
+        font-weight: bold;
+        padding-bottom: unset;
+    }
+    
+    .map_block a {
+        font-size: 12px;
+        padding-left: 5%;
+    }
+    
+    .map_block p {
+        font-size: 12px;
+        margin-bottom: unset;
+    }
+
+    .bck_footer {
+        padding-right: 13%;
+        padding-left: 13%;
+    }
+    
+    .footer {
+        height: 100%;
+        display: unset;
+
+    }
+
+    .pagamentos {
+        display: none;
+    }
+
+    .social_nets {
+        padding: 5%;
+    }
+    
+    .social_nets a {
+        width: 15%;
+        height: 15%;
+    }
+    
+    .icon_footer {
+        width: 15%;
+        height: 15%;
+    }
+    
+    .footer h1 {
+        display: none;
+    }
+    
+    .social_nets h1 {
+        font-size: 16px;
+    }
+    
+    .pagamentos h1 {
+        font-size: 16px;
+    }
+    
+       
+        /* .social_nets a {
+            width: 50px;
+            height: 50px;
+        }
+    
+        .icon_footer {
+            width: 50px;
+            height: 50px;
+        }
+        
+        .social_nets h1 {
+            font-size: 20px;
+        }
+        
+        .pagamentos h1 {
+            font-size: 20px;
+        }
+    
+        .card-news h3 {
+            font-size: 20px;
+        }
+        
+        .card-news p {
+            font-size: 20px;
+        }
+        
+        .card-news a {
+            font-size: 22px;
+        }
+    
+        .map_block h1 {
+            font-size: 38px;
+        }
+        
+        .map_block a {
+            font-size: 24px;
+        }
+        
+        .map_block p {
+            font-size: 24px;
+        }
+    
+        header {
+            height: 150px;
+            position: relative;
+        }
+    
+        .position_header {
+            height: 100%;
+        }
+    
+        .bars_menu {
+            display: inline-block;
+            width: 50px;
+        }
+    
+        .secao_categorias {
+            background-color: unset;
+            height: unset;
+            width: unset;
+        }
+    
+        .categorias {
+            display: none;
+            flex-direction: column;
+            background-color: black;
+            border-radius: 10px;
+            align-items: center;
+            margin-right: 160px;
+            height: unset;
+            width: 16%;
+            margin-top: -120px;
+        }
+    
+        .categorias a {
+            font-size: 16px;
+            margin: 10px;
+        }
+    
+        .categorias a:hover{
+            zoom: 1.1;
+        }
+        
+        .menu-show {
+            display: flex;
+        }
+        
+        .logo {
+            width: 300px;
+            display: flex;
+            justify-content: space-between;
+        }
+    
+        .texto_banner h1 {
+            font-size: 48px;
+        }
+    
+        .texto_banner a {
+            font-size: 27px;
+        }
+    
+        .icons {
+            width: 300px;
+        }
+    
+        .icons a {
+            width: 50px;
+        }
+    
+        .texto_banner h1 {
+            width: 580px;
+        }
+    
+        .site_map {
+            height: 520px;
+        }
+    
+        .footer h1 {
+            font-size: 16px;
+        }
+    
+        .social_nets a {
+            width: 35px;
+            height: 35px;
+        }
+    
+        .icon_footer {
+            width: 35px;
+            height: 35px;
+        }
+        
+        .social_nets h1 {
+            font-size: 16px;
+        }
+        
+        .pagamentos h1 {
+            font-size: 16px;
+        }
+    
+        .card-news h3 {
+            font-size: 18px;
+        }
+        
+        .card-news p {
+            font-size: 18px;
+        }
+        
+        .card-news a {
+            font-size: 20px;
+        }
+    
+        .map_block h1 {
+            font-size: 30px;
+        }
+        
+        .map_block a {
+            font-size: 20px;
+        }
+        
+        .map_block p {
+            font-size: 20px;
+    } */
+
+}

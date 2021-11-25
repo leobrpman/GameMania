@@ -3,47 +3,233 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width= , initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GameMania - Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <!-- <meta name="description" content="E-commerce de games e produtos de informática">
+    <meta name="keywords" content="games, jogos, informática">
+    <meta name="author" content="Leonardo BrPMan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 </head>
-<body>
+<body onload="renderizarNoticias()">
     <header>
         <div class="container position_header">
             <a href="#"><img class="logo" src="../GameMania/img/Logo.svg" alt="Logo Game Mania"></a>
+            <!-- <form class="search" action="">
+                <input id="campo_search" class="campo_search" type="search" placeholder="Digite o que procura..." required>
+                <button class="search_button" onclick="searchGo()"></button>
+            </form> -->
             <nav class="icons">
-                <a href="#"><img class="icon1200" src="../GameMania/img/help.svg" alt="Fale Conosco"></a>
-                <a href="#"><img class="icon1200" src="../GameMania/img/login.svg" alt="Login"></a>
-                <a href="#"><img class="icon1200" src="../GameMania/img/carrinho.svg" alt="Carrinho"></a>
+                <a href="#"><img class="icon_header" src="../GameMania/img/help.svg" alt="Fale Conosco"></a>
+                <a href="#"><img class="icon_header" src="../GameMania/img/login1.svg" alt="Login"></a>
+                <a href="#"><img class="icon_header" src="../GameMania/img/carrinho.svg" alt="Carrinho"></a>
+                <!-- <a href="#" onclick="mostrarMenu()"><img class="bars_menu" src="./img/bars.svg" alt="Menu de barras"></a> -->
+                <a href="#" id="bars" class="bars_menu" ><img src="./img/bars.svg" alt="Menu de barras"></a>
             </nav>
+        </div>
+        <div class="secao_categorias">
+            <div id="categorias" class="categorias container">
+                <a href="#">PCs e Notebooks</a>
+                <a href="#">Celulares</a>
+                <a href="#">Jogos</a>
+                <a href="#">Acessórios</a>
+                <a href="#">Home Office</a>
+                <a href="#">PC Gamer</a>
+                <a href="#">Notícias</a>
+                <a href="#">Sobre</a>
+            </div>
+        </div>
+        <div class="secao_mobile">
+            <div class="icons_mobile container">
+                <a href="#"><img class="icon_header" src="./img/support_w.png" alt="Fale Conosco"></a>
+                <a href="#"><img class="icon_header" src="./img/login_w.png" alt="Login"></a>
+                <a href="#"><img class="icon_header" src="./img/carrinho_w.png" alt="Carrinho"></a>
+                <!-- <a href="#" onclick="mostrarMenu()"><img class="bars_menu" src="./img/bars.svg" alt="Menu de barras"></a> -->
+                <a href="#" id="bars" class="bars_menu" ><img src="./img/menu_w.png" alt="Menu de barras"></a>
+            </div>
         </div>
     </header>
 
-    <section class="secao_categorias">
-        <div class="categorias container">
-            <a href="#">PCs e Notebooks</a>
-            <a href="#">Celulares</a>
-            <a href="#">Jogos</a>
-            <a href="#">Acessórios</a>
-            <a href="#">Home Office</a>
-            <a href="#">PC Gamer</a>
-            <a href="#">Notícias</a>
-            <a href="#">Sobre</a>
-        </div>
-    </section>
-
-    <div class="banner">
-        <div class="container banner_itens">
+    <!-- <div id="banner1" class="banner1">
+        <img src="./img/img_games.png" alt="">
+        <img src="./img/img_equip.png" alt="">
+        <img src="./img/img_pcgamer.png" alt="">
+    </div>     -->
+    
+    <div class="banner1">
+        <div class="banner_itens">
             <div class="texto_banner">
                 <h1>Tudo para a sua melhor experiência em games</h1>
+            </div>
+            <div class="button_banner">
                 <a href="#">Ver produtos</a>
             </div>
         </div>
+    </div>
 
+    <div class="banner2">
+        <div class="banner_itens">
+            <div class="texto_banner">
+                <h1>Promoções exlusivas em computadores, celulares e acessórios</h1>
+            </div>
+            <div class="button_banner">
+                <a href="#">Ver produtos</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="banner3">
+        <div class="banner_itens">
+            <div class="texto_banner">
+                <h1>Monte seu PC Gamer e conte com nossa ajuda</h1>
+            </div>
+            <div class="button_banner">
+                <a href="#">Ver produtos</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news">
+        <h1>Notícias</h1>
+        <div id="news_space" class="content-news">
+            <!-- <div class="card-news">
+                <a href="#"><img src="./img/copa_rakin_valorant.png" alt="imagem de flyer da Copa Rakin de Valorant: chegou o momento"></a>
+                <h3>Copa Rakin - 2ª Edição</h3>
+                <p>Copa Rakin ganha edição com foco em mulheres, transgêneros e não-binários. Segunda edição do campeonato terá produção majoritariamente feminina e distribuirá R$ 40 mil em premiação. Ler notícia.</p>
+                <a href="#">Ler notícia</a>
+            </div>
+            <div class="card-news">
+                <a href="#"><img src="./img/fifa22.png" alt="imagem de anúncio do Jogo Fifa 22 com jogadores do Paris Saint Germain perfilados: Neymar, Mbape e Di Maria"></a>
+                <h3>Em breve! Fifa 22</h3>
+                <p>FIFA 22 tem saldo positivo ao mergulhar na nova geração de consoles. Novo game, como de costume, parece solucionar grandes problemas do anterior. Para PS 5 e Xbox Series. Ler notícia.</p>
+                <a href="#">Ler notícia</a>
+            </div>
+            <div class="card-news">
+                <a href="#"><img src="./img/free_fire_favela.png" alt="imagem de flyer da campeonato Free Fire Taça das Favelas"></a>
+                <h3>Free Fire: Taça das Favelas</h3>
+                <p>Taça das Favelas de Free Fire é anunciada com apoio de LOUD e Itaú. Nova edição terá repescagem, mais de R$ 100 mil em premiação e time campeão fará bootcamp nas instalações da LOUD. Ler notícia.</p>
+                <a href="#">Ler notícia</a>
+            </div>
+            <div class="card-news">
+                <a href="#"><img src="./img/re4-vr.png" alt="imagem dos personagens do jogo Resident Evil 4"></a>
+                <h3>Em breve! Resident Evil 4 VR</h3>
+                <p>O jogo será lançado em 21 de outubro para Oculus Quest 2. A data foi anunciada por meio de  trailer inédito divulgado nesta segunda (27).Anova versão não deverá ser lançada para outras plataformas. Ler notícia.</p>
+                <a href="#">Ler notícia</a>
+            </div> -->
+        </div>
+        <div class="button_banner">
+            <a href="#">Mais notícias</a>
+        </div>
+    </div>
+    
+    <div class="newsletter">
+        <div class="newsletter_itens container">
+            <img src="./img/icon_newsletter.png" alt="ícone de carta estiizado representando email para seção de newsletter">
+            <div class="newsletter_text">
+                <p>Assine nossa newsletter para novidades e ofertas exclusivas!</p>
+            </div>
+            <form class="form_mail" action="">
+                <input id="campo_email" class="campo_mail" type="email" placeholder="Digite seu e-mail..." required>
+                <button class="submit" onclick="cadastroEmail()">Enviar</button>
+                <!-- <input class="submit" type="submit" value="Enviar"> -->
+            </form>
+        </div>
+    </div>
+    
+
+    <div class="site_map container">
+        <div class="map_block">
+                <h1>O que você procura?</h1>
+                <a href="#">Home</a>
+                <a href="#">Jogos</a>
+                <a href="#">Eletrônicos e equipamentos</a>
+                <a href="#">Destaques</a>
+                <a href="#">Lançamentos</a>
+                <a href="#">Notícias e eventos</a>
+                <a href="#">Mais vendidos</a>
+                <a href="#">Em breve</a>
+                <a href="#">Ofertas</a>
+                <a href="#">Blog</a>
+            </div>
+        <div class="map_block">
+                <h1>Institucional</h1>
+                <a href="#">Sobre</a>
+                <a href="#">SAC</a>
+                <a href="#">Garantias e reembolsos</a>
+                <a href="#">Termos de serviço</a>
+                <a href="#">Política de privacidade</a>
+                <a href="#">Segurança</a>
+                <a href="#">Documentos</a>
+            </div>
+        <div class="map_block">
+                <h1>Fale conosco</h1>
+                <p>Av. Paulista, 2053 - loja 13</p>
+                <section>
+                    <!-- mapa não ativado -->
+                    <iframe src="https://www.google.com/maps/place/Av.+Paulista,+2053+-+Bela+Vista,+S%C3%A3o+Paulo+-+SP,+01311-300/@-23.5589628,-46.6597805,16z/data=!4m2!3m1!1s0x94ce59cd6c33fc01:0xffaae8350ddcadec" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </section>
+                <p>(11) 99999-9999 (Vivo)</p>
+                <p>(11) 98888-8888 (Claro)</p>
+                <p>(11) 3555-5555</p>
+                <p>faleconosco@gamemania.com.br</p>
+            </div>
+        </div>
+        
+    </div>
+
+    <footer>
+        <div class="bck_footer">
+            <nav class="footer container">
+                <div class="social_nets">
+                    <h1>Siga-nos nas redes!</h1>
+                    <a href="#"><img class="icon_footer" src="./img/facebook.svg" alt="link para o facebook da game mania"></a>
+                    <a href="#"><img class="icon_footer" src="./img/twitter.svg" alt="link para o twitter da game mania"></a>
+                    <a href="#"><img class="icon_footer" src="./img/youtube.svg" alt="link para o youtube da game mania"></a>
+                    <a href="#"><img class="icon_footer" src="./img/instagram.svg" alt="link para o instagem da game mania"></a>
+                </div>
+                <h1 class="copyright">Copyright © 2021 GameMania. Todos os direitos reservados.</h1>
+                <h2>© 2021 Todos os direitos reservados.</h2>
+                <div class="pagamentos">
+                    <h1>Formas de pagamento</h1>
+                    <img class="icon_footer" src="./img/cc-visa 1.svg" alt="Logo da visa">
+                    <img class="icon_footer" src="./img/cc-mastercard 1.svg" alt="logo da mastercard">
+                    <img class="icon_footer" src="./img/cc-paypal 1.svg" alt="logo do paypal">
+                    <img class="icon_footer" src="./img/cc-apple-pay 1.svg" alt="logo do applepay">
+                    <img class="icon_footer" src="./img/boleto.svg" alt="ícone de boleto bancário">
+                </div>
+            </nav>
+        </div>
+    </footer>
+
+    
+        <script>
+            let categorias = document.getElementById("categorias");
+            function mostrarMenu() {
+                // console.log(getComputedStyle(categorias).display);
+                if(categorias.style.display == "none") {
+                    categorias.style.display = "flex";
+                } else {
+                    categorias.style.display = "none";
+                }
+            }
+        </script>
+    <script type="text/javascript" src="js/jquery-3.6.0.js"></script>    
+    <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <!-- <script async src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script> -->
+    <!-- usei a classe "container" do bootstrap -->
 </body>
 </html>
+
+<!-- <form action="" m>
+    <input id="campo_email" type="email" placeholder="Digite seu e-mail..." required>
+    <button onclick="enviarEmail()">Cadastrar</button>
+ou
+    <input type="submit" value="Cadastrar">
+</form> -->
+
+
 
 
 
